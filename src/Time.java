@@ -90,6 +90,12 @@ public class Time {
         this.mins = mins;
     }
 
+    /**
+     * tick method for the Time class. This method will increment secs by 1. If secs is equal
+     * to 60, it will set secs to zero and increment mins by 1. If mins is equal to 60, it will
+     * set mins to 0 and increment hrs by 1. If hrs is equal to 24, it sets hrs to zero.
+     */
+
     public void tick()
     {
         secs++;
@@ -108,6 +114,17 @@ public class Time {
             hrs = 0;
         }
     }
+
+    /**
+     * increaseTime method for the Time class. This method will increase secs, mins, and hrs
+     * by the amount specified in the time parameter. If secs becomes greater than or
+     * equal to 60, 60 is subtracted from it and mins is incremented by 1. If mins becomes
+     * greater than or equal to 60, mins is 60 is subtracted from it and hrs is incremented by
+     * 1. if hrs becomes greater than or equal to 24, 24 is subtracted from it.
+     *
+     * @param time is the time object with the secs, mins, and hrs that increment the current time
+     * object.
+     */
 
     public void increaseTime (Time time)
     {
@@ -151,6 +168,14 @@ public class Time {
             }
         }
     }
+
+    /**
+     * toString method for the Time class. This method will add a "0" before the value of
+     * secs, mins, and hrs if they are single digit numbers, and then take them as Strings and
+     * display them with proper formatting.
+     *
+     * @return returns the properly formatted String displaying the time.
+     */
 
     public String toString()
     {
